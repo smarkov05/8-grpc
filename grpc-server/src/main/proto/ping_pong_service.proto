@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.mentoring.stubs.pingpong;
+
+option java_package="com.mentoring.stubs.pingpong";
+
+service PingPongService{
+  rpc hitBall(HitBallProto) returns (BallReturnProto);
+}
+
+message HitBallProto{
+  int32 hitPower = 1;
+}
+
+message BallReturnProto{
+  bool canBallReturn = 1;
+}

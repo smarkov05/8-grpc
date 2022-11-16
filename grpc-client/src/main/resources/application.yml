@@ -1,0 +1,7 @@
+server:
+  port: 8000
+  application:
+    name: grpc-client
+grpc:
+  port: 8880
+  enable-reflection: true

@@ -1,0 +1,54 @@
+{
+  "namespace": "com.mentoring",
+  "type": "record",
+  "name": "GameStatisticAvro",
+  "fields": [
+    {
+      "name": "gameDate",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      }
+    },
+    {
+      "name": "score",
+      "type": "string"
+    },
+    {
+      "name": "players",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "PlayerAvro",
+          "fields": [
+            {
+              "name": "fullName",
+              "type": "string"
+            },
+            {
+              "name": "rank",
+              "type": "long"
+            },
+            {
+              "name": "disqualified",
+              "type": "boolean"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "gameStatus",
+      "type": {
+        "type": "enum",
+        "name": "GameStatusAvro",
+        "symbols": [
+          "SCHEDULED",
+          "IN_PROGRESS",
+          "FINISHED",
+          "NO_CONTESTED"      ]
+      }
+    }
+  ]
+}

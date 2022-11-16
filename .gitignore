@@ -1,0 +1,5 @@
+# Project exclude paths
+/avro-consumer/target/
+/avro-producer/target/
+/grpc-client/target/
+/grpc-server/target/
